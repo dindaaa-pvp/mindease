@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<!-- saved from url=(0140)https://btrgafpbstmw8ad5.canva-hosted-embed.com/codelet/AAEAEGJ0cmdhZnBic3RtdzhhZDUAAAAAAZqpqmKPk2TyhGVyXa4vxmiOFQc-VnM9EQbOXlFWZqQyXg4ER-8/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindEase - Mental Health Support for Teens</title>
+  <script src="./data_sdk.js.download"></script>
+  <script src="./element_sdk.js.download"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffeef8 0%, #fff5f9 50%, #ffffff 100%);
+      min-height: 100%;
+      color: #2d2d2d;
+      overflow-x: hidden;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      min-height: 100%;
+    }
+    
+    .floral-border {
+      width: 100%;
+      max-width: 600px;
+      height: 60px;
+      margin: 0 auto 2rem auto;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    .app-title {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #ff69b4 0%, #ffb6d9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 0.5rem 0;
+      text-shadow: 0 2px 10px rgba(255, 105, 180, 0.1);
+    }
+    
+    .tagline {
+      font-size: 1.25rem;
+      color: #6b6b6b;
+      margin: 0;
+    }
+    
+    .user-greeting {
+      font-size: 1.125rem;
+      color: #ff69b4;
+      font-weight: 600;
+      margin: 0.5rem 0 0 0;
+    }
+    
+    .nav-tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .nav-tab {
+      padding: 0.875rem 1.75rem;
+      background: #ffffff;
+      border: 2px solid #ffe4f1;
+      border-radius: 50px;
+      color: #6b6b6b;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(255, 182, 215, 0.1);
+    }
+    
+    .nav-tab:hover {
+      background: #fff0f6;
+      border-color: #ffb6d9;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(255, 182, 215, 0.2);
+    }
+    
+    .nav-tab.active {
+      background: linear-gradient(135deg, #ffb6d9 0%, #ff69b4 100%);
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3);
+    }
+    
+    .content-section {
+      display: none;
+      animation: slideIn 0.5s ease-out;
+    }
+    
+    .content-section.active {
+      display: block;
+    }
+    
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(255, 182, 215, 0.15);
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255, 182, 215, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+      box-shadow: 0 8px 30px rgba(255, 182, 215, 0.25);
+    }
+    
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #2d2d2d;
+      margin: 0 0 1rem 0;
+    }
+    
+    .section-subtitle {
+      color: #6b6b6b;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    
+    .weekly-summary {
+      background: linear-gradient(135deg, #fff0f6 0%, #ffe4f1 100%);
+      border-radius: 18px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 2px solid #ffb6d9;
+    }
+    
+    .summary-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ff69b4;
+      margin: 0 0 1.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .mood-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .mood-stat-item {
+      background: #ffffff;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(255, 182, 215, 0.1);
+    }
+    
+    .mood-stat-emoji {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    
+    .mood-stat-label {
+      font-size: 0.875rem;
+      color: #6b6b6b;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    
+    .mood-stat-count {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ff69b4;
+    }
+    
+    .daily-summary {
+      margin-bottom: 2rem;
+    }
+    
+    .daily-group {
+      background: linear-gradient(135deg, #fff5f9 0%, #ffffff 100%);
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #ff69b4;
+    }
+    
+    .daily-date {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #2d2d2d;
+      margin: 0 0 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .daily-mood-summary {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      background: #ffffff;
+      border-radius: 10px;
+    }
+    
+    .daily-mood-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(135deg, #ffe4f1 0%, #fff0f6 100%);
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #ff69b4;
+    }
+    
+    .mood-selector {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .mood-option {
+      padding: 1.5rem 1rem;
+      background: linear-gradient(135deg, #fff5f9 0%, #ffffff 100%);
+      border: 3px solid transparent;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    
+    .mood-option:hover {
+      background: #fff0f6;
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(255, 182, 215, 0.2);
+    }
+    
+    .mood-option.selected {
+      border-color: #ff69b4;
+      background: linear-gradient(135deg, #fff0f6 0%, #ffe4f1 100%);
+      box-shadow: 0 6px 20px rgba(255, 105, 180, 0.3);
+    }
+    
+    .mood-emoji {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    
+    .mood-label {
+      font-size: 0.875rem;
+      color: #4a5568;
+      font-weight: 600;
+    }
+    
+    .journal-form {
+      margin-top: 1.5rem;
+    }
+    
+    .form-label {
+      display: block;
+      font-size: 1rem;
+      color: #2d3748;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .journal-textarea {
+      width: 100%;
+      min-height: 180px;
+      padding: 1.25rem;
+      border: 2px solid #ffe4f1;
+      border-radius: 15px;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+      transition: all 0.3s ease;
+      background: #fff5f9;
+    }
+    
+    .journal-textarea:focus {
+      outline: none;
+      border-color: #ff69b4;
+      background: #ffffff;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+    }
+    
+    .journal-textarea::placeholder {
+      color: #a0a0a0;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #ffb6d9 0%, #ff69b4 100%);
+      color: #ffffff;
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 25px rgba(255, 105, 180, 0.4);
+    }
+    
+    .btn-primary:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .wellness-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .wellness-card {
+      background: linear-gradient(135deg, #fff5f9 0%, #ffffff 100%);
+      padding: 2rem;
+      border-radius: 18px;
+      border: 2px solid #ffe4f1;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .wellness-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(255, 182, 215, 0.25);
+      border-color: #ffb6d9;
+    }
+    
+    .wellness-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .wellness-title {
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: #2d2d2d;
+      margin: 0 0 0.75rem 0;
+    }
+    
+    .wellness-description {
+      font-size: 0.938rem;
+      color: #6b6b6b;
+      line-height: 1.7;
+      margin: 0;
+    }
+    
+    .mood-history {
+      margin-top: 1.5rem;
+    }
+    
+    .mood-entry {
+      background: linear-gradient(135deg, #fff5f9 0%, #ffffff 100%);
+      padding: 1.5rem;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+      border-left: 5px solid #ff69b4;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(255, 182, 215, 0.1);
+    }
+    
+    .mood-entry:hover {
+      background: #fff0f6;
+      transform: translateX(8px);
+      box-shadow: 0 4px 20px rgba(255, 182, 215, 0.2);
+    }
+    
+    .mood-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    
+    .mood-entry-mood {
+      font-size: 1.75rem;
+    }
+    
+    .mood-entry-date {
+      font-size: 0.875rem;
+      color: #a0a0a0;
+      font-weight: 500;
+    }
+    
+    .mood-entry-text {
+      color: #4a5568;
+      line-height: 1.7;
+      margin: 0;
+      font-size: 0.938rem;
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: 4rem 1rem;
+      color: #a0a0a0;
+    }
+    
+    .empty-state-icon {
+      font-size: 5rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.4;
+    }
+    
+    .empty-state-text {
+      font-size: 1.125rem;
+      margin: 0;
+    }
+    
+    .loading-indicator {
+      display: inline-block;
+      width: 1.25rem;
+      height: 1.25rem;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-top-color: #ffffff;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #ffb6d9 0%, #ff69b4 100%);
+      color: #ffffff;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      z-index: 1000;
+      box-shadow: 0 8px 30px rgba(255, 105, 180, 0.4);
+      animation: slideUp 0.3s ease-out;
+      max-width: 90%;
+      text-align: center;
+    }
+    
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      animation: fadeIn 0.3s ease-out;
+      padding: 1.5rem;
+    }
+    
+    .modal-content {
+      background: #ffffff;
+      border-radius: 25px;
+      padding: 2.5rem;
+      max-width: 600px;
+      width: 100%;
+      max-height: 80%;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
+      animation: slideUp 0.3s ease-out;
+    }
+    
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .modal-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #2d2d2d;
+      margin: 0;
+    }
+    
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #a0a0a0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+    
+    .modal-close:hover {
+      background: #fff0f6;
+      color: #ff69b4;
+    }
+    
+    .modal-body {
+      color: #4a5568;
+      line-height: 1.8;
+      font-size: 1rem;
+      white-space: pre-line;
+    }
+    
+    .name-input {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #ffe4f1;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: inherit;
+      margin: 1rem 0;
+      transition: all 0.3s ease;
+      background: #fff5f9;
+    }
+    
+    .name-input:focus {
+      outline: none;
+      border-color: #ff69b4;
+      background: #ffffff;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+    }
+    
+    .modal-button {
+      width: 100%;
+      background: linear-gradient(135deg, #ffb6d9 0%, #ff69b4 100%);
+      color: #ffffff;
+      border: none;
+      padding: 1rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3);
+      margin-top: 1rem;
+    }
+    
+    .modal-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(255, 105, 180, 0.4);
+    }
+    
+    .modal-button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .app-title {
+        font-size: 2.25rem;
+      }
+      
+      .tagline {
+        font-size: 1rem;
+      }
+      
+      .mood-selector {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      .wellness-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .nav-tabs {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 0.5rem;
+      }
+      
+      .modal-content {
+        padding: 2rem;
+      }
+      
+      .mood-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="./saved_resource" type="text/javascript"></script>
+ <style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}</style></head>
+ <body style="background: linear-gradient(135deg, rgb(255, 238, 248) 0%, rgb(255, 245, 249) 50%, rgb(255, 255, 255) 100%); font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif; font-size: 16px; color: rgb(45, 45, 45);">
+  <div class="container">
+   <header class="header">
+    <h1 class="app-title" style="font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif; font-size: 48px; background: linear-gradient(135deg, rgb(255, 105, 180) 0%, rgb(255, 182, 217) 100%) text; -webkit-text-fill-color: transparent;">MindEase</h1>
+    <p class="tagline" style="font-size: 20px;">Your safe space for mental wellness</p>
+    <p class="user-greeting" id="user-greeting">Halo, dirga! 💜</p>
+    <svg class="floral-border" viewBox="0 0 600 60" xmlns="http://www.w3.org/2000/svg"><!-- Left side flowers --> <circle cx="50" cy="30" r="5" fill="#ffb6d9" opacity="0.8"></circle> <circle cx="47" cy="27" r="3" fill="#ffc0e0" opacity="0.9"></circle> <circle cx="53" cy="27" r="3" fill="#ffc0e0" opacity="0.9"></circle> <circle cx="47" cy="33" r="3" fill="#ffc0e0" opacity="0.9"></circle> <circle cx="53" cy="33" r="3" fill="#ffc0e0" opacity="0.9"></circle> <circle cx="50" cy="30" r="2" fill="#ffe4f1"></circle> <circle cx="80" cy="25" r="4" fill="#ffb6d9" opacity="0.7"></circle> <circle cx="78" cy="23" r="2.5" fill="#ffc0e0" opacity="0.8"></circle> <circle cx="82" cy="23" r="2.5" fill="#ffc0e0" opacity="0.8"></circle> <circle cx="78" cy="27" r="2.5" fill="#ffc0e0" opacity="0.8"></circle> <circle cx="82" cy="27" r="2.5" fill="#ffc0e0" opacity="0.8"></circle> <circle cx="110" cy="35" r="4.5" fill="#ffb6d9" opacity="0.75"></circle> <circle cx="107" cy="32" r="3" fill="#ffc0e0" opacity="0.85"></circle> <circle cx="113" cy="32" r="3" fill="#ffc0e0" opacity="0.85"></circle> <circle cx="107" cy="38" r="3" fill="#ffc0e0" opacity="0.85"></circle> <circle cx="113" cy="38" r="3" fill="#ffc0e0" opacity="0.85"></circle> <!-- Center flower (larger) --> <circle cx="300" cy="30" r="7" fill="#ff69b4" opacity="0.8"></circle> <circle cx="295" cy="25" r="4.5" fill="#ffb6d9" opacity="0.9"></circle> <circle cx="305" cy="25" r="4.5" fill="#ffb6d9" opacity="0.9"></circle> <circle cx="295" cy="35" r="4.5" fill="#ffb6d9" opacity="0.9"></circle> <circle cx="305" cy="35" r="4.5" fill="#ffb6d9" opacity="0.9"></circle> <circle cx="300" cy="30" r="3" fill="#ffe4f1"></circle> <!-- Right side flowers (mirrored) --> <circle cx="550" cy="30" r="5" fill="#ffb6d9" opacity="0.8"></circle> <circle cx="547" cy="27" r="3" fill="#ffc0e0" opacity="0.9"></circle> <circle cx="553" cy="27" r="3" fill="#ffc0e0" opacity="0.9"></circle> <circle cx="547" cy="33" r="3" fill="#ffc0e0" opacity="0.9"></circle> <circle cx="553" cy="33" r="3" fill="#ffc0e0" opacity="0.9"></circle> <circle cx="550" cy="30" r="2" fill="#ffe4f1"></circle> <circle cx="520" cy="25" r="4" fill="#ffb6d9" opacity="0.7"></circle> <circle cx="518" cy="23" r="2.5" fill="#ffc0e0" opacity="0.8"></circle> <circle cx="522" cy="23" r="2.5" fill="#ffc0e0" opacity="0.8"></circle> <circle cx="518" cy="27" r="2.5" fill="#ffc0e0" opacity="0.8"></circle> <circle cx="522" cy="27" r="2.5" fill="#ffc0e0" opacity="0.8"></circle> <circle cx="490" cy="35" r="4.5" fill="#ffb6d9" opacity="0.75"></circle> <circle cx="487" cy="32" r="3" fill="#ffc0e0" opacity="0.85"></circle> <circle cx="493" cy="32" r="3" fill="#ffc0e0" opacity="0.85"></circle> <circle cx="487" cy="38" r="3" fill="#ffc0e0" opacity="0.85"></circle> <circle cx="493" cy="38" r="3" fill="#ffc0e0" opacity="0.85"></circle> <!-- Leaves and vines --> <path d="M 70 30 Q 185 40, 300 30" stroke="#b8e6b8" stroke-width="1.5" fill="none" opacity="0.6"></path> <path d="M 300 30 Q 415 20, 530 30" stroke="#b8e6b8" stroke-width="1.5" fill="none" opacity="0.6"></path> <!-- Small leaves --> <ellipse cx="140" cy="35" rx="8" ry="4" fill="#c8f0c8" opacity="0.7" transform="rotate(-30 140 35)"></ellipse> <ellipse cx="180" cy="38" rx="7" ry="3.5" fill="#c8f0c8" opacity="0.65" transform="rotate(25 180 38)"></ellipse> <ellipse cx="220" cy="32" rx="8" ry="4" fill="#c8f0c8" opacity="0.7" transform="rotate(-20 220 32)"></ellipse> <ellipse cx="260" cy="28" rx="7" ry="3.5" fill="#c8f0c8" opacity="0.65" transform="rotate(30 260 28)"></ellipse> <ellipse cx="340" cy="28" rx="7" ry="3.5" fill="#c8f0c8" opacity="0.65" transform="rotate(-30 340 28)"></ellipse> <ellipse cx="380" cy="32" rx="8" ry="4" fill="#c8f0c8" opacity="0.7" transform="rotate(20 380 32)"></ellipse> <ellipse cx="420" cy="38" rx="7" ry="3.5" fill="#c8f0c8" opacity="0.65" transform="rotate(-25 420 38)"></ellipse> <ellipse cx="460" cy="35" rx="8" ry="4" fill="#c8f0c8" opacity="0.7" transform="rotate(30 460 35)"></ellipse> <!-- Decorative dots --> <circle cx="160" cy="30" r="1.5" fill="#ffb6d9" opacity="0.6"></circle> <circle cx="170" cy="33" r="1.5" fill="#ffc0e0" opacity="0.6"></circle> <circle cx="200" cy="36" r="1.5" fill="#ffb6d9" opacity="0.6"></circle> <circle cx="240" cy="25" r="1.5" fill="#ffc0e0" opacity="0.6"></circle> <circle cx="280" cy="24" r="1.5" fill="#ffb6d9" opacity="0.6"></circle> <circle cx="320" cy="24" r="1.5" fill="#ffc0e0" opacity="0.6"></circle> <circle cx="360" cy="25" r="1.5" fill="#ffb6d9" opacity="0.6"></circle> <circle cx="400" cy="36" r="1.5" fill="#ffc0e0" opacity="0.6"></circle> <circle cx="430" cy="33" r="1.5" fill="#ffb6d9" opacity="0.6"></circle> <circle cx="440" cy="30" r="1.5" fill="#ffc0e0" opacity="0.6"></circle> <!-- Swirls --> <path d="M 130 28 Q 135 26, 138 28" stroke="#ffb6d9" stroke-width="1" fill="none" opacity="0.5"></path> <path d="M 470 28 Q 465 26, 462 28" stroke="#ffb6d9" stroke-width="1" fill="none" opacity="0.5"></path>
+    </svg>
+   </header>
+   <nav class="nav-tabs"><button class="nav-tab active" data-tab="journal" style="background: linear-gradient(135deg, rgb(255, 182, 217) 0%, rgb(255, 105, 180) 100%);">📝 Daily Journal</button> <button class="nav-tab" data-tab="wellness">✨ Wellness Tools</button> <button class="nav-tab" data-tab="tracker">📊 Mood Tracker</button>
+   </nav>
+   <div id="journal" class="content-section active">
+    <div class="card" style="background: rgb(255, 255, 255);">
+     <h2 class="section-title" style="font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif; font-size: 28px; color: rgb(45, 45, 45);">Daily Mood Journal</h2>
+     <p class="section-subtitle">Take a moment to check in with yourself. Journaling helps you understand your emotions and build self-awareness. Your feelings are valid, and this is your safe space to express them.</p>
+     <form id="journal-form" class="journal-form"><label class="form-label" style="font-size: 16px;">How are you feeling today?</label>
+      <div class="mood-selector">
+       <div class="mood-option" data-mood="happy"><span class="mood-emoji">😊</span> <span class="mood-label">Happy</span>
+       </div>
+       <div class="mood-option" data-mood="calm"><span class="mood-emoji">😌</span> <span class="mood-label">Calm</span>
+       </div>
+       <div class="mood-option" data-mood="anxious"><span class="mood-emoji">😰</span> <span class="mood-label">Anxious</span>
+       </div>
+       <div class="mood-option" data-mood="sad"><span class="mood-emoji">😢</span> <span class="mood-label">Sad</span>
+       </div>
+       <div class="mood-option" data-mood="stressed"><span class="mood-emoji">😫</span> <span class="mood-label">Stressed</span>
+       </div>
+       <div class="mood-option" data-mood="tired"><span class="mood-emoji">😴</span> <span class="mood-label">Tired</span>
+       </div>
+      </div><label for="journal-entry" class="form-label">Write about your day (optional)</label> <textarea id="journal-entry" class="journal-textarea" placeholder="What&#39;s been on your mind today? School stress? Friends? Family? Or maybe something good happened? Write freely - this is your space..."></textarea> <button type="submit" class="btn-primary" style="margin-top: 1.25rem; background: linear-gradient(135deg, rgb(255, 182, 217) 0%, rgb(255, 105, 180) 100%);">💜 Save My Entry</button>
+     </form>
+    </div>
+   </div>
+   <div id="wellness" class="content-section">
+    <div class="card" style="background: rgb(255, 255, 255);">
+     <h2 class="section-title" style="font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif; color: rgb(45, 45, 45);">Wellness Resources</h2>
+     <p class="section-subtitle">Explore these tools designed to help you manage stress, build resilience, and find peace. Remember, taking care of your mental health is just as important as your physical health.</p>
+     <div class="wellness-grid">
+      <div class="wellness-card" onclick="showWellnessContent(&#39;meditation&#39;)"><span class="wellness-icon">🧘</span>
+       <h3 class="wellness-title" style="font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif; color: rgb(45, 45, 45);">Guided Meditation</h3>
+       <p class="wellness-description">Quick breathing exercises and mindfulness practices to help you relax, center yourself, and find calm in the chaos of school life.</p>
+      </div>
+      <div class="wellness-card" onclick="showWellnessContent(&#39;motivation&#39;)"><span class="wellness-icon">��</span>
+       <h3 class="wellness-title" style="font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif; color: rgb(45, 45, 45);">Daily Motivation</h3>
+       <p class="wellness-description">Uplifting affirmations and messages to boost your mood, remind you of your worth, and help you face challenges with confidence.</p>
+      </div>
+      <div class="wellness-card" onclick="showWellnessContent(&#39;stress&#39;)"><span class="wellness-icon">🎯</span>
+       <h3 class="wellness-title" style="font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif; color: rgb(45, 45, 45);">Stress Management</h3>
+       <p class="wellness-description">Practical tips and proven techniques for handling academic pressure, test anxiety, and the daily stresses of being a student.</p>
+      </div>
+      <div class="wellness-card" onclick="showWellnessContent(&#39;sleep&#39;)"><span class="wellness-icon">🌙</span>
+       <h3 class="wellness-title" style="font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif; color: rgb(45, 45, 45);">Better Sleep</h3>
+       <p class="wellness-description">Evidence-based strategies to improve your sleep quality and establish healthy bedtime routines for better rest and recovery.</p>
+      </div>
+      <div class="wellness-card" onclick="showWellnessContent(&#39;social&#39;)"><span class="wellness-icon">💬</span>
+       <h3 class="wellness-title" style="font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif; color: rgb(45, 45, 45);">Social Wellness</h3>
+       <p class="wellness-description">Tips for navigating friendships, setting boundaries, dealing with peer pressure, and building healthy relationships.</p>
+      </div>
+      <div class="wellness-card" onclick="showWellnessContent(&#39;selfcare&#39;)"><span class="wellness-icon">💖</span>
+       <h3 class="wellness-title" style="font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif; color: rgb(45, 45, 45);">Self-Care Ideas</h3>
+       <p class="wellness-description">Simple, practical self-care activities you can do daily to nurture your mental and emotional well-being.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="tracker" class="content-section">
+    <div class="card" style="background: rgb(255, 255, 255);">
+     <h2 class="section-title" style="font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif; color: rgb(45, 45, 45);">Mood Tracker</h2>
+     <p class="section-subtitle">Review your emotional journey over time. Tracking your moods helps you identify patterns, understand triggers, and recognize what helps you feel better. Every entry is a step toward greater self-awareness.</p>
+     <div id="weekly-summary" class="weekly-summary"></div>
+     <div id="daily-summary" class="daily-summary"></div>
+     <div id="mood-history" class="mood-history">
+          <div class="empty-state">
+            <div class="empty-state-icon">📝</div>
+            <p class="empty-state-text">No journal entries yet. Start tracking your emotions today!<br>Every entry helps you understand yourself better.</p>
+          </div>
+        </div>
+    </div>
+   </div>
+  </div>
+  <script>
+    const defaultConfig = {
+      background_color: '#ffeef8',
+      surface_color: '#ffffff',
+      text_color: '#2d2d2d',
+      primary_action_color: '#ff69b4',
+      secondary_action_color: '#ffb6d9',
+      font_family: 'Inter',
+      font_size: 16,
+      app_title: 'MindEase',
+      tagline: 'Your safe space for mental wellness',
+      journal_title: 'Daily Mood Journal',
+      journal_prompt: 'How are you feeling today?',
+      meditation_title: 'Guided Meditation',
+      motivation_title: 'Daily Motivation',
+      stress_title: 'Stress Management'
+    };
+    
+    let selectedMood = null;
+    let currentData = [];
+    let currentUserId = null;
+    let currentUserName = null;
+    
+    const moodEmojis = {
+      happy: '😊',
+      calm: '😌',
+      anxious: '😰',
+      sad: '😢',
+      stressed: '😫',
+      tired: '😴'
+    };
+    
+    const moodLabels = {
+      happy: 'Happy',
+      calm: 'Calm',
+      anxious: 'Anxious',
+      sad: 'Sad',
+      stressed: 'Stressed',
+      tired: 'Tired'
+    };
+    
+    function getUserId() {
+      let userId = localStorage.getItem('mindease_user_id');
+      if (!userId) {
+        userId = 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        localStorage.setItem('mindease_user_id', userId);
+      }
+      return userId;
+    }
+    
+    function getUserName() {
+      return localStorage.getItem('mindease_user_name');
+    }
+    
+    function saveUserName(name) {
+      localStorage.setItem('mindease_user_name', name);
+    }
+    
+    const dataHandler = {
+      onDataChanged(data) {
+        const filteredData = data.filter(entry => entry.user_id === currentUserId);
+        currentData = filteredData.sort((a, b) => b.timestamp - a.timestamp);
+        updateMoodHistory();
+        updateWeeklySummary();
+        updateDailySummary();
+      }
+    };
+    
+    async function initializeApp() {
+      currentUserId = getUserId();
+      currentUserName = getUserName();
+      
+      if (!currentUserName) {
+        showNameInputModal();
+      } else {
+        updateGreeting();
+      }
+      
+      if (window.dataSdk) {
+        const initResult = await window.dataSdk.init(dataHandler);
+        if (!initResult.isOk) {
+          console.error('Failed to initialize data SDK');
+        }
+      }
+      
+      if (window.elementSdk) {
+        await window.elementSdk.init({
+          defaultConfig,
+          onConfigChange,
+          mapToCapabilities,
+          mapToEditPanelValues
+        });
+      }
+      
+      setupEventListeners();
+    }
+    
+    function updateGreeting() {
+      const greetingEl = document.getElementById('user-greeting');
+      if (greetingEl && currentUserName) {
+        greetingEl.textContent = `Halo, ${currentUserName}! 💜`;
+      }
+    }
+    
+    function showNameInputModal() {
+      const modal = document.createElement('div');
+      modal.className = 'modal-overlay';
+      modal.id = 'name-modal';
+      
+      modal.innerHTML = `
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Selamat Datang di MindEase! 🌸</h3>
+          </div>
+          <div class="modal-body">
+            <p style="margin-top: 0;">Untuk pengalaman yang lebih personal, silakan masukkan nama Anda:</p>
+            <label for="user-name-input" class="form-label">Nama Anda</label>
+            <input type="text" id="user-name-input" class="name-input" placeholder="Masukkan nama Anda..." maxlength="50">
+            <button class="modal-button" onclick="saveUserNameFromModal()">Mulai Perjalanan Saya 💜</button>
+          </div>
+        </div>
+      `;
+      
+      document.body.appendChild(modal);
+      
+      setTimeout(() => {
+        document.getElementById('user-name-input').focus();
+      }, 300);
+      
+      document.getElementById('user-name-input').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          saveUserNameFromModal();
+        }
+      });
+    }
+    
+    function saveUserNameFromModal() {
+      const nameInput = document.getElementById('user-name-input');
+      const name = nameInput.value.trim();
+      
+      if (!name) {
+        showToast('Silakan masukkan nama Anda 💜');
+        return;
+      }
+      
+      currentUserName = name;
+      saveUserName(name);
+      updateGreeting();
+      
+      const modal = document.getElementById('name-modal');
+      if (modal) {
+        modal.style.opacity = '0';
+        setTimeout(() => modal.remove(), 300);
+      }
+      
+      showToast(`Selamat datang, ${name}! 🌸`);
+    }
+    
+    function updateWeeklySummary() {
+      const summaryContainer = document.getElementById('weekly-summary');
+      
+      if (currentData.length === 0) {
+        summaryContainer.innerHTML = '';
+        return;
+      }
+      
+      // Get last 7 days data
+      const now = Date.now();
+      const sevenDaysAgo = now - (7 * 24 * 60 * 60 * 1000);
+      const weekData = currentData.filter(entry => entry.timestamp >= sevenDaysAgo);
+      
+      if (weekData.length === 0) {
+        summaryContainer.innerHTML = '';
+        return;
+      }
+      
+      // Count moods
+      const moodCounts = {};
+      weekData.forEach(entry => {
+        moodCounts[entry.mood] = (moodCounts[entry.mood] || 0) + 1;
+      });
+      
+      // Find most common mood
+      const sortedMoods = Object.entries(moodCounts).sort((a, b) => b[1] - a[1]);
+      const mostCommonMood = sortedMoods[0];
+      
+      // Calculate total journal entries
+      const journalEntries = weekData.filter(entry => entry.journal_entry && entry.journal_entry.trim()).length;
+      
+      let moodStatsHTML = '';
+      Object.keys(moodEmojis).forEach(mood => {
+        const count = moodCounts[mood] || 0;
+        if (count > 0) {
+          moodStatsHTML += `
+            <div class="mood-stat-item">
+              <span class="mood-stat-emoji">${moodEmojis[mood]}</span>
+              <div class="mood-stat-label">${moodLabels[mood]}</div>
+              <div class="mood-stat-count">${count}x</div>
+            </div>
+          `;
+        }
+      });
+      
+      summaryContainer.innerHTML = `
+        <h3 class="summary-title">📊 Rekap Mingguan (7 Hari Terakhir)</h3>
+        <p style="margin: 0 0 1rem 0; color: #6b6b6b;">
+          <strong>Total Check-ins:</strong> ${weekData.length} kali<br>
+          <strong>Jurnal Ditulis:</strong> ${journalEntries} entri<br>
+          <strong>Mood Paling Sering:</strong> ${moodEmojis[mostCommonMood[0]]} ${moodLabels[mostCommonMood[0]]} (${mostCommonMood[1]} kali)
+        </p>
+        <div class="mood-stats">
+          ${moodStatsHTML}
+        </div>
+      `;
+    }
+    
+    function updateDailySummary() {
+      const summaryContainer = document.getElementById('daily-summary');
+      
+      if (currentData.length === 0) {
+        summaryContainer.innerHTML = '';
+        return;
+      }
+      
+      // Group by date
+      const groupedByDate = {};
+      currentData.forEach(entry => {
+        const date = new Date(entry.date);
+        const dateKey = date.toLocaleDateString('id-ID', { 
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        
+        if (!groupedByDate[dateKey]) {
+          groupedByDate[dateKey] = [];
+        }
+        groupedByDate[dateKey].push(entry);
+      });
+      
+      // Generate HTML
+      let dailyHTML = '<h3 class="summary-title" style="margin-top: 2rem;">📅 Rekap Harian</h3>';
+      
+      Object.entries(groupedByDate).forEach(([date, entries]) => {
+        const moodSummary = {};
+        entries.forEach(entry => {
+          moodSummary[entry.mood] = (moodSummary[entry.mood] || 0) + 1;
+        });
+        
+        let moodBadges = '';
+        Object.entries(moodSummary).forEach(([mood, count]) => {
+          moodBadges += `
+            <span class="daily-mood-badge">
+              ${moodEmojis[mood]} ${moodLabels[mood]} ${count > 1 ? `(${count}x)` : ''}
+            </span>
+          `;
+        });
+        
+        const journalCount = entries.filter(e => e.journal_entry && e.journal_entry.trim()).length;
+        
+        dailyHTML += `
+          <div class="daily-group">
+            <div class="daily-date">📆 ${date}</div>
+            <div class="daily-mood-summary">${moodBadges}</div>
+            <p style="margin: 0; color: #6b6b6b; font-size: 0.875rem;">
+              ${entries.length} check-in${entries.length > 1 ? 's' : ''} • 
+              ${journalCount} jurnal ditulis
+            </p>
+          </div>
+        `;
+      });
+      
+      summaryContainer.innerHTML = dailyHTML;
+    }
+    
+    async function onConfigChange(config) {
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseFontStack = '-apple-system, BlinkMacSystemFont, \'Segoe UI\', sans-serif';
+      const baseSize = config.font_size || defaultConfig.font_size;
+      
+      document.body.style.background = `linear-gradient(135deg, ${config.background_color || defaultConfig.background_color} 0%, #fff5f9 50%, ${config.surface_color || defaultConfig.surface_color} 100%)`;
+      document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      document.body.style.fontSize = `${baseSize}px`;
+      document.body.style.color = config.text_color || defaultConfig.text_color;
+      
+      const cards = document.querySelectorAll('.card, .modal-content');
+      cards.forEach(card => {
+        card.style.background = config.surface_color || defaultConfig.surface_color;
+      });
+      
+      const appTitle = document.querySelector('.app-title');
+      if (appTitle) {
+        appTitle.textContent = config.app_title || defaultConfig.app_title;
+        appTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+        appTitle.style.fontSize = `${baseSize * 3}px`;
+        appTitle.style.background = `linear-gradient(135deg, ${config.primary_action_color || defaultConfig.primary_action_color} 0%, ${config.secondary_action_color || defaultConfig.secondary_action_color} 100%)`;
+        appTitle.style.webkitBackgroundClip = 'text';
+        appTitle.style.webkitTextFillColor = 'transparent';
+        appTitle.style.backgroundClip = 'text';
+      }
+      
+      const tagline = document.querySelector('.tagline');
+      if (tagline) {
+        tagline.textContent = config.tagline || defaultConfig.tagline;
+        tagline.style.fontSize = `${baseSize * 1.25}px`;
+      }
+      
+      const journalTitle = document.querySelector('#journal .section-title');
+      if (journalTitle) {
+        journalTitle.textContent = config.journal_title || defaultConfig.journal_title;
+        journalTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+        journalTitle.style.fontSize = `${baseSize * 1.75}px`;
+        journalTitle.style.color = config.text_color || defaultConfig.text_color;
+      }
+      
+      const journalPrompt = document.querySelector('#journal .form-label');
+      if (journalPrompt) {
+        journalPrompt.textContent = config.journal_prompt || defaultConfig.journal_prompt;
+        journalPrompt.style.fontSize = `${baseSize}px`;
+      }
+      
+      const wellnessTitles = document.querySelectorAll('.wellness-title');
+      if (wellnessTitles.length >= 3) {
+        wellnessTitles[0].textContent = config.meditation_title || defaultConfig.meditation_title;
+        wellnessTitles[1].textContent = config.motivation_title || defaultConfig.motivation_title;
+        wellnessTitles[2].textContent = config.stress_title || defaultConfig.stress_title;
+      }
+      
+      const primaryBtns = document.querySelectorAll('.btn-primary, .nav-tab.active');
+      primaryBtns.forEach(btn => {
+        btn.style.background = `linear-gradient(135deg, ${config.secondary_action_color || defaultConfig.secondary_action_color} 0%, ${config.primary_action_color || defaultConfig.primary_action_color} 100%)`;
+      });
+      
+      const moodEntries = document.querySelectorAll('.mood-entry');
+      moodEntries.forEach(entry => {
+        entry.style.borderLeftColor = config.primary_action_color || defaultConfig.primary_action_color;
+      });
+      
+      const allTitles = document.querySelectorAll('.section-title, .wellness-title, .modal-title');
+      allTitles.forEach(title => {
+        title.style.fontFamily = `${customFont}, ${baseFontStack}`;
+        title.style.color = config.text_color || defaultConfig.text_color;
+      });
+    }
+    
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.primary_action_color = value;
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.secondary_action_color = value;
+                window.elementSdk.setConfig({ secondary_action_color: value });
+              }
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            if (window.elementSdk) {
+              window.elementSdk.config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            if (window.elementSdk) {
+              window.elementSdk.config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }
+      };
+    }
+    
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ['app_title', config.app_title || defaultConfig.app_title],
+        ['tagline', config.tagline || defaultConfig.tagline],
+        ['journal_title', config.journal_title || defaultConfig.journal_title],
+        ['journal_prompt', config.journal_prompt || defaultConfig.journal_prompt],
+        ['meditation_title', config.meditation_title || defaultConfig.meditation_title],
+        ['motivation_title', config.motivation_title || defaultConfig.motivation_title],
+        ['stress_title', config.stress_title || defaultConfig.stress_title]
+      ]);
+    }
+    
+    function setupEventListeners() {
+      const tabs = document.querySelectorAll('.nav-tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => switchTab(tab.dataset.tab));
+      });
+      
+      const moodOptions = document.querySelectorAll('.mood-option');
+      moodOptions.forEach(option => {
+        option.addEventListener('click', () => selectMood(option));
+      });
+      
+      const journalForm = document.getElementById('journal-form');
+      journalForm.addEventListener('submit', handleJournalSubmit);
+    }
+    
+    function switchTab(tabName) {
+      const tabs = document.querySelectorAll('.nav-tab');
+      const sections = document.querySelectorAll('.content-section');
+      
+      tabs.forEach(tab => {
+        if (tab.dataset.tab === tabName) {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
+      });
+      
+      sections.forEach(section => {
+        if (section.id === tabName) {
+          section.classList.add('active');
+        } else {
+          section.classList.remove('active');
+        }
+      });
+    }
+    
+    function selectMood(option) {
+      const moodOptions = document.querySelectorAll('.mood-option');
+      moodOptions.forEach(opt => opt.classList.remove('selected'));
+      option.classList.add('selected');
+      selectedMood = option.dataset.mood;
+    }
+    
+    async function handleJournalSubmit(e) {
+      e.preventDefault();
+      
+      if (!selectedMood) {
+        showToast('Please select a mood first 💜');
+        return;
+      }
+      
+      if (currentData.length >= 999) {
+        showModal('Storage Limit Reached', 'You\'ve reached the maximum of 999 journal entries. To save new entries, please delete some older ones from your Mood Tracker. Your mental health journey is important - consider exporting or backing up your entries before deleting them.');
+        return;
+      }
+      
+      const journalEntry = document.getElementById('journal-entry').value;
+      const submitBtn = e.target.querySelector('.btn-primary');
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="loading-indicator"></span>';
+      
+      const entry = {
+        id: Date.now().toString(),
+        type: 'journal',
+        date: new Date().toISOString(),
+        mood: selectedMood,
+        journal_entry: journalEntry,
+        timestamp: Date.now(),
+        user_id: currentUserId
+      };
+      
+      if (window.dataSdk) {
+        const result = await window.dataSdk.create(entry);
+        
+        if (result.isOk) {
+          document.getElementById('journal-entry').value = '';
+          const moodOptions = document.querySelectorAll('.mood-option');
+          moodOptions.forEach(opt => opt.classList.remove('selected'));
+          selectedMood = null;
+          showToast('Entry saved! Keep tracking your journey 💜');
+        } else {
+          showToast('Failed to save entry. Please try again.');
+        }
+      }
+      
+      submitBtn.disabled = false;
+      submitBtn.textContent = '💜 Save My Entry';
+    }
+    
+    function showWellnessContent(type) {
+      function getWeekOfMonth() {
+      const now = new Date();
+      const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+      const daysSinceStart = Math.floor((now - startOfMonth) / (24 * 60 * 60 * 1000));
+      return Math.floor(daysSinceStart / 7) % 4; // Returns 0-3 for weeks 1-4
+    }
+    
+    const weeklyContent = {
+      meditation: [
+        {
+          title: '🧘 Guided Meditation Exercise - Minggu 1',
+          body: `Take a moment right now to breathe and center yourself.
+
+**5-Minute Calm Down Exercise:**
+
+1. Find a comfortable position, sitting or lying down
+2. Close your eyes or soften your gaze
+3. Breathe in slowly through your nose for 4 counts
+4. Hold your breath gently for 4 counts
+5. Breathe out slowly through your mouth for 6 counts
+6. Repeat this cycle 5-10 times
+
+**What to Focus On:**
+- Notice the sensation of air entering and leaving your body
+- If your mind wanders (it will!), gently bring it back to your breath
+- There's no "perfect" way to meditate - any time spent is valuable
+
+**Quick Grounding Technique:**
+When you're feeling overwhelmed, use the 5-4-3-2-1 method:
+- Name 5 things you can see
+- 4 things you can touch
+- 3 things you can hear
+- 2 things you can smell
+- 1 thing you can taste
+
+This brings you back to the present moment and out of anxious thoughts.`
+        },
+        {
+          title: '🧘 Body Scan Meditation - Minggu 2',
+          body: `This week, try a body scan meditation to release physical tension.
+
+**10-Minute Body Scan:**
+
+1. Lie down or sit comfortably with your eyes closed
+2. Start by taking 3 deep, cleansing breaths
+3. Bring your attention to the top of your head
+4. Notice any sensations - warmth, coolness, tingling, or tension
+5. Slowly move your attention down through each body part:
+   - Face and jaw (relax any clenching)
+   - Neck and shoulders (let them drop)
+   - Arms and hands
+   - Chest and stomach
+   - Hips and legs
+   - Feet and toes
+
+**The Goal:**
+- Don't try to change anything, just observe
+- If you find tension, breathe into that area
+- Imagine sending warmth and relaxation to tight spots
+- This helps you become aware of stress you're holding
+
+**Mini Body Scan (2 Minutes):**
+When stressed, quickly scan: jaw, shoulders, hands, stomach. Consciously relax each area.`
+        },
+        {
+          title: '🧘 Visualization Meditation - Minggu 3',
+          body: `Use the power of your imagination to find peace and calm.
+
+**Safe Space Visualization:**
+
+1. Close your eyes and take 5 deep breaths
+2. Imagine a place where you feel completely safe and peaceful
+   - A beach, forest, cozy room, or anywhere that feels right
+3. Make it vivid in your mind:
+   - What do you see? (colors, light, objects)
+   - What do you hear? (waves, birds, music)
+   - What do you smell? (ocean air, flowers, fresh bread)
+   - What do you feel? (warm sun, soft blanket, gentle breeze)
+4. Spend 5-10 minutes here, exploring every detail
+5. Know you can return to this place anytime you need calm
+
+**Positive Future Visualization:**
+- Imagine yourself successfully handling a challenge
+- See yourself confident, calm, and capable
+- Feel the pride and relief of getting through it
+- This primes your brain for actual success
+
+**Quick Escape (1 Minute):**
+Close your eyes and count 10 breaths while picturing your safe space.`
+        },
+        {
+          title: '🧘 Loving-Kindness Meditation - Minggu 4',
+          body: `Cultivate compassion for yourself and others with this practice.
+
+**Loving-Kindness Practice:**
+
+1. Sit comfortably and close your eyes
+2. Take a few deep breaths to settle in
+3. Start with yourself - place a hand on your heart and say:
+   - "May I be happy"
+   - "May I be healthy"
+   - "May I be safe"
+   - "May I be at peace"
+4. Really feel these wishes for yourself
+5. Now bring to mind someone you love, and direct these wishes to them
+6. Then think of a neutral person (classmate, bus driver)
+7. Finally, if you're ready, think of someone difficult
+
+**Why This Matters:**
+- We're often our own worst critics
+- This builds self-compassion and kindness
+- It reduces feelings of isolation
+- Helps with anger and resentment
+
+**Daily Practice:**
+Each morning, wish yourself these four things. It takes 30 seconds and changes your whole day.`
+        }
+      ],
+      motivation: [
+        {
+          title: '✨ Daily Motivation & Affirmations - Minggu 1',
+          body: `You are stronger than you think. Here are some truths to remember:
+
+**Affirmations for Tough Days:**
+💜 "I am doing my best, and that is enough"
+💜 "It's okay to not be okay sometimes"
+💜 "My worth is not defined by my grades or achievements"
+💜 "I am growing and learning every day"
+💜 "I deserve kindness, especially from myself"
+💜 "This feeling is temporary, and I will get through it"
+💜 "Asking for help is a sign of strength, not weakness"
+
+**Remember:**
+- Bad days don't mean a bad life
+- You don't have to be perfect to be worthy
+- Everyone struggles sometimes - you're not alone
+- Small steps forward are still progress
+- Your feelings are valid, even if others don't understand
+- Taking care of yourself isn't selfish
+
+**Challenge for Today:**
+Write down one thing you're proud of yourself for, no matter how small. Did you get out of bed? That counts. Did you attend class even though you felt anxious? That's courage. Celebrate your wins, big and small.`
+        },
+        {
+          title: '✨ Growth Mindset & Resilience - Minggu 2',
+          body: `This week, focus on building resilience and embracing growth.
+
+**Growth Mindset Affirmations:**
+🌱 "Challenges help me grow stronger"
+🌱 "Mistakes are proof that I'm trying"
+🌱 "I can learn anything with time and practice"
+🌱 "My potential is unlimited"
+🌱 "Feedback helps me improve, not define me"
+🌱 "I embrace the process, not just the outcome"
+🌱 "Every expert was once a beginner"
+
+**Reframe Your Thoughts:**
+❌ "I can't do this" → ✅ "I can't do this YET"
+❌ "I failed" → ✅ "I learned what doesn't work"
+❌ "This is too hard" → ✅ "This will take time and effort"
+❌ "I'm not smart enough" → ✅ "I need to try a different strategy"
+
+**Your Resilience Story:**
+Think about a time you overcame something difficult. Maybe you:
+- Passed a subject you struggled with
+- Made a new friend after feeling lonely
+- Got through a family challenge
+- Recovered from being hurt
+
+You've been resilient before. You can do it again.
+
+**Weekly Challenge:**
+Try something new this week that scares you a little. Join a club, speak up in class, or learn a new skill. Growth happens outside your comfort zone.`
+        },
+        {
+          title: '✨ Self-Worth & Confidence - Minggu 3',
+          body: `You are valuable exactly as you are. This week, strengthen your self-worth.
+
+**I Am Enough Affirmations:**
+💎 "I am worthy of love and respect"
+💎 "I don't need to prove my worth to anyone"
+💎 "I am more than my appearance"
+💎 "My value doesn't decrease based on others' opinions"
+💎 "I deserve to take up space"
+💎 "I am allowed to be imperfect"
+💎 "I am worthy of good things"
+
+**What Makes You Unique:**
+Take a moment to acknowledge what makes YOU special:
+- Your sense of humor
+- Your creativity
+- Your kindness
+- Your perspective
+- Your resilience
+- Your interests and passions
+- Your way of seeing the world
+
+**Combat Comparison:**
+When you compare yourself to others, remember:
+- You're comparing your behind-the-scenes to their highlight reel
+- Everyone has struggles you don't see
+- There's only one YOU - that's your superpower
+- Your journey is yours alone
+
+**Mirror Work:**
+This week, look in the mirror and say one kind thing to yourself each day:
+- "I like my smile"
+- "I'm proud of how I handled that situation"
+- "I'm a good friend"
+- "I'm doing the best I can"
+
+It might feel awkward at first, but you're rewiring your brain to be kinder to yourself.`
+        },
+        {
+          title: '✨ Hope & Future Vision - Minggu 4',
+          body: `Even on hard days, there is hope. This week, connect with your future.
+
+**Hope Affirmations:**
+🌟 "Things can and will get better"
+🌟 "I am creating the life I want, one day at a time"
+🌟 "My best days are still ahead of me"
+🌟 "I have so much to offer the world"
+🌟 "I am exactly where I need to be right now"
+🌟 "Good things are coming my way"
+🌟 "I am writing my own story"
+
+**Your Future Self:**
+Close your eyes and imagine yourself 5 years from now:
+- Where are you?
+- What have you achieved?
+- How do you feel?
+- What are you proud of?
+- Who is in your life?
+
+Your future self is rooting for you. Every choice you make today is a gift to them.
+
+**Letter to Your Future Self:**
+Write a letter to yourself to open in 1 year. Include:
+- What you're going through now
+- Your hopes and dreams
+- Advice you'd give yourself
+- Things you're grateful for
+- Goals you're working toward
+
+**When Hope Feels Far:**
+- Remember times you've felt hopeless before and got through it
+- Talk to someone who loves you
+- Do one tiny thing that moves you forward
+- Be patient with yourself - healing isn't linear
+- Seek professional help if darkness feels overwhelming
+
+You matter. Your story isn't over. Better chapters are coming.`
+        }
+      ],
+      stress: [
+        {
+          title: '🎯 Stress Management Techniques - Minggu 1',
+          body: `School stress is real, and you don't have to face it alone.
+
+**Immediate Stress Relief:**
+- Take 10 deep breaths right now
+- Step outside for fresh air
+- Listen to your favorite calming music
+- Do 10 jumping jacks to release tension
+- Text a friend who makes you laugh
+
+**Managing Academic Pressure:**
+1. **Break it down:** Large tasks feel overwhelming. Break them into tiny, manageable steps
+2. **Time blocking:** Study for 25 minutes, then take a 5-minute break (Pomodoro Technique)
+3. **Prioritize:** What MUST be done today? What can wait? Be realistic
+4. **Say no:** You can't do everything. It's okay to decline some commitments
+5. **Lower the bar:** Done is better than perfect
+
+**When Test Anxiety Hits:**
+- Arrive early so you're not rushed
+- Bring water and a snack
+- Read through all questions first
+- Start with questions you know
+- Take deep breaths between sections
+- Remember: One test doesn't define you
+
+**Create a Stress-Free Zone:**
+Designate one space (your room, a corner, anywhere) as stress-free. When you're there, no homework talk, no school stress. Just relaxation and self-care.
+
+**Important:** If stress is affecting your sleep, eating, or daily functioning, please talk to a trusted adult, school counselor, or mental health professional.`
+        },
+        {
+          title: '🎯 Time Management & Organization - Minggu 2',
+          body: `This week, learn to manage your time to reduce stress before it builds.
+
+**The Planning Method:**
+Every Sunday, spend 15 minutes planning your week:
+- Write down all assignments and deadlines
+- Note extracurricular activities and commitments
+- Schedule study time AND fun time
+- Identify your busiest day and plan accordingly
+
+**Daily Priority System:**
+Each morning, identify your "Top 3" tasks:
+1. Most important (must be done today)
+2. Should be done (important but not urgent)
+3. Nice to do (if time allows)
+
+Focus on #1 first, always.
+
+**The 2-Minute Rule:**
+If something takes less than 2 minutes, do it NOW:
+- Reply to that message
+- Put away your clothes
+- Check tomorrow's schedule
+- Write down that idea
+
+Small tasks pile up and create mental clutter.
+
+**Beat Procrastination:**
+- Start with just 5 minutes (often you'll keep going)
+- Use the "Swiss cheese" method: poke holes in big tasks by doing small parts
+- Reward yourself after completing sections
+- Work during your peak energy time
+- Remove distractions (phone in another room!)
+
+**Sunday Reset:**
+- Clean your study space
+- Organize your backpack/materials
+- Review the week ahead
+- Prep what you can (outfit, lunch, etc.)
+- Get to bed early
+
+A organized space = organized mind = less stress.`
+        },
+        {
+          title: '🎯 Emotional Regulation Skills - Minggu 3',
+          body: `When emotions feel overwhelming, these skills help you regain control.
+
+**STOP Technique (in the moment):**
+**S**top - Freeze, don't react immediately
+**T**ake a breath - Slow, deep breath
+**O**bserve - What am I feeling? What triggered this?
+**P**roceed mindfully - Choose your response
+
+**Name It to Tame It:**
+Research shows that naming emotions reduces their intensity:
+- "I'm feeling anxious about the test"
+- "I'm angry because I feel left out"
+- "I'm sad because I miss my friend"
+
+Simply naming it helps your brain process it better.
+
+**The Feelings Wheel:**
+Get specific about emotions. Instead of "bad," identify:
+- Angry? Or frustrated, annoyed, bitter, resentful?
+- Sad? Or lonely, disappointed, hopeless, hurt?
+- Anxious? Or worried, overwhelmed, insecure, nervous?
+
+Precision helps you address the real issue.
+
+**Healthy Ways to Release Emotions:**
+- **Anger:** Physical activity, punch a pillow, rip paper, loud music
+- **Sadness:** Cry it out, sad music, hug someone, journal
+- **Anxiety:** Progressive muscle relaxation, worry journal, talk it out
+- **Overwhelm:** Brain dump everything on paper, prioritize, ask for help
+
+**The 90-Second Rule:**
+Neuroscientist Dr. Jill Bolte Taylor found that emotions last 90 seconds in the body - UNLESS we feed them with thoughts. When you feel strong emotion:
+- Notice it ("I feel angry")
+- Don't judge it ("It's okay to feel this")
+- Watch it pass (like a wave)
+- Don't add fuel with thoughts ("This always happens to me...")
+
+**Crisis Coping:**
+If emotions feel unbearable:
+- Call someone immediately
+- Use crisis text line (text HELLO to 741741)
+- Practice intense sensory grounding (ice cube in hand, cold water splash)
+- Don't be alone`
+        },
+        {
+          title: '🎯 Building Stress Resilience - Minggu 4',
+          body: `This week, focus on long-term strategies to handle stress better over time.
+
+**Build Your Support System:**
+Identify your people:
+- Who can you call when stressed?
+- Who makes you laugh?
+- Who gives good advice?
+- Who just listens without judging?
+
+Don't wait until you're in crisis. Nurture these relationships now.
+
+**Stress Inoculation:**
+Small controlled stresses build resilience:
+- Try new things that challenge you
+- Practice public speaking in low-stakes situations
+- Have hard conversations
+- Do things that scare you a little
+
+Each time you face fear and survive, you prove to yourself you can handle hard things.
+
+**Your Stress Signals:**
+Learn to recognize YOUR early warning signs:
+Physical: headaches, stomach issues, muscle tension, tiredness
+Emotional: irritability, anxiety, mood swings, crying easily
+Behavioral: isolation, sleeping too much/little, appetite changes
+Mental: trouble focusing, negative thoughts, forgetfulness
+
+When you notice these, take action BEFORE you're overwhelmed.
+
+**Stress-Reduction Lifestyle:**
+Daily habits that prevent stress buildup:
+- 7-9 hours of sleep
+- Regular exercise (even 20-minute walks help)
+- Healthy meals and snacks
+- Limited caffeine and sugar
+- Time in nature
+- Creative outlets
+- Social connection
+- Saying no to overscheduling
+
+**Perspective Shifts:**
+When stressed, ask yourself:
+- Will this matter in 5 years?
+- What's the worst that could happen? Can I handle that?
+- What would I tell my best friend in this situation?
+- What's one small thing I can control right now?
+
+**Professional Help:**
+Consider therapy or counseling if:
+- Stress interferes with daily life for 2+ weeks
+- You're having panic attacks
+- You're using substances to cope
+- You have thoughts of self-harm
+- You feel hopeless
+
+Asking for help is brave, not weak.`
+        }
+      ],
+      sleep: [
+        { title: '🌙 Better Sleep Strategies', body: `Sleep is crucial for mental health, memory, and handling stress.` },
+        { title: '🌙 Better Sleep Strategies', body: `Sleep is crucial for mental health, memory, and handling stress.` },
+        { title: '🌙 Better Sleep Strategies', body: `Sleep is crucial for mental health, memory, and handling stress.` },
+        { title: '🌙 Better Sleep Strategies', body: `Sleep is crucial for mental health, memory, and handling stress.` }
+      ],
+      social: [
+        { title: '💬 Social Wellness & Relationships', body: `Navigating friendships and social life during teenage years can be challenging.` },
+        { title: '💬 Social Wellness & Relationships', body: `Navigating friendships and social life during teenage years can be challenging.` },
+        { title: '💬 Social Wellness & Relationships', body: `Navigating friendships and social life during teenage years can be challenging.` },
+        { title: '💬 Social Wellness & Relationships', body: `Navigating friendships and social life during teenage years can be challenging.` }
+      ],
+      selfcare: [
+        { title: '💖 Simple Self-Care Ideas', body: `Self-care isn't selfish - it's necessary. Here are practical ways to take care of yourself.` },
+        { title: '💖 Simple Self-Care Ideas', body: `Self-care isn't selfish - it's necessary. Here are practical ways to take care of yourself.` },
+        { title: '💖 Simple Self-Care Ideas', body: `Self-care isn't selfish - it's necessary. Here are practical ways to take care of yourself.` },
+        { title: '💖 Simple Self-Care Ideas', body: `Self-care isn't selfish - it's necessary. Here are practical ways to take care of yourself.` }
+      ]
+    };
+      
+      const weekIndex = getWeekOfMonth();
+      const selectedContent = weeklyContent[type][weekIndex];
+      showModal(selectedContent.title, selectedContent.body);
+    }
+    
+    function updateMoodHistory() {
+      const historyContainer = document.getElementById('mood-history');
+      
+      if (currentData.length === 0) {
+        historyContainer.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">📝</div>
+            <p class="empty-state-text">No journal entries yet. Start tracking your emotions today!<br>Every entry helps you understand yourself better.</p>
+          </div>
+        `;
+        return;
+      }
+      
+      historyContainer.innerHTML = '<h3 class="summary-title" style="margin-top: 2rem;">📜 Semua Entri Jurnal</h3>';
+      
+      currentData.forEach(entry => {
+        const entryDiv = document.createElement('div');
+        entryDiv.className = 'mood-entry';
+        
+        const date = new Date(entry.date);
+        const dateStr = date.toLocaleDateString('id-ID', { 
+          weekday: 'long',
+          month: 'long', 
+          day: 'numeric',
+          year: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+        
+        entryDiv.innerHTML = `
+          <div class="mood-entry-header">
+            <span class="mood-entry-mood">${moodEmojis[entry.mood]} ${entry.mood.charAt(0).toUpperCase() + entry.mood.slice(1)}</span>
+            <span class="mood-entry-date">${dateStr}</span>
+          </div>
+          ${entry.journal_entry ? `<p class="mood-entry-text">${entry.journal_entry}</p>` : '<p class="mood-entry-text" style="font-style: italic; color: #a0a0a0;">No journal entry for this mood check-in</p>'}
+        `;
+        
+        historyContainer.appendChild(entryDiv);
+      });
+    }
+    
+    function showToast(message) {
+      const existingToast = document.querySelector('.toast');
+      if (existingToast) {
+        existingToast.remove();
+      }
+      
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.textContent = message;
+      
+      document.body.appendChild(toast);
+      
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(-50%) translateY(20px)';
+        setTimeout(() => toast.remove(), 300);
+      }, 3000);
+    }
+    
+    function showModal(title, body) {
+      const modal = document.createElement('div');
+      modal.className = 'modal-overlay';
+      
+      modal.innerHTML = `
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">${title}</h3>
+            <button class="modal-close" onclick="closeModal()">×</button>
+          </div>
+          <div class="modal-body">${body}</div>
+        </div>
+      `;
+      
+      document.body.appendChild(modal);
+      
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+    }
+    
+    function closeModal() {
+      const modal = document.querySelector('.modal-overlay');
+      if (modal) {
+        modal.style.opacity = '0';
+        setTimeout(() => modal.remove(), 300);
+      }
+    }
+    
+    initializeApp();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a1d3150f367e782',t:'MTc2MzY5NjcwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;" src="./saved_resource(1).html"></iframe>
+</body></html>
